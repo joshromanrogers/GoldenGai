@@ -8,6 +8,7 @@
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script> 
     <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@^3.1.1/dist/aframe-template-component.min.js"></script>
   </head>
   <body>
     <a-scene rain>
@@ -17,7 +18,32 @@
             <img id="floor" src="img/floor.jpg">
             <img id="floorNormal" src="img/floorNormal.jpg">
             <img id="nightSky" src="img/nightSky.jpg">
-          </a-assets>
+            
+            <!-- <script id="clouds" type="text/x-jade-template">
+              - for (var x = 0; x < 5; x++) {
+                - for (var z = 0; z < 5; z++) {
+                  rw-room(outside='true', position='0 0 -10', material='color: #866; side: double')
+  rw-ceiling
+  rw-floor
+  rw-wall(position='4 0 0')
+  rw-wall(position='4 0 4')
+  rw-wall(position='0 0 4')
+  rw-wall(position='0 0 0')
+    rw-doorhole#hole + x
+    rw-doorlink(from='#hole' + x, to='#hole' + z, position='2.5 0 0')
+rw-room(outside='true', side='double', position='4 0 -2', material='color: #866; side: double')
+  rw-wall(position=' 1 0  1', side='double', material='color:#877; side: double')
+    rw-doorhole#hole + z
+
+
+                - }
+              - }
+            </script> -->
+
+
+        </a-assets>
+
+          <a-entity template="src: #clouds"></a-entity>
     
           <!-- ground -->
     
@@ -36,40 +62,41 @@
           </a-sky>
 
           <!-- building w/ door -->
+          
 
-          <rw-room outside="true" position="0 0 -10" material="color: #866; side: double">
-            <rw-ceiling></rw-ceiling>
-            <rw-floor></rw-floor>
-            <rw-wall position="4 0 0"></rw-wall>
-            <rw-wall position="4 0 4"></rw-wall>
-            <rw-wall position="0 0 4"></rw-wall>
-            <rw-wall position="0 0 0">
-                <rw-doorhole id="holeA"></rw-doorhole>
-                <rw-doorlink from="#holeA" to="#holeB" position="2.5 0 0"></rw-doorlink>
-            </rw-wall>
-          </rw-room>
-          <rw-room outside="true" side="double" position="4 0 -2" material="color: #866; side: double">
-              <rw-wall position=" 1 0  1"  side="double" material="color:#877; side: double">
-                  <rw-doorhole id="holeB"></rw-doorhole>
+          <rw-room position="-3 0 -7" material="color:#866" width="4.8" length="4.8" height="3">
+              <rw-wall >
+                  <a-box class="bar" position="1.7 0.5 2.01" depth="4" height="1" width="0.7"></a-box>
               </rw-wall>
+              <rw-wall >
+                <a-box position="0.5 1.4 0" scale="0.5 0.5 0.2"></a-box>
+                <a-box position="1.5 1.7 0" scale="0.5 0.5 0.2"></a-box>
+                <a-box position="2.5 1.4 0" scale="0.5 0.5 0.2"></a-box>
+              </rw-wall>
+              <rw-wall >
+                  <rw-doorhole id="frontInner" material="color:#866"></rw-doorhole>
+              </rw-wall>   
+              <rw-wall ></rw-wall>
+              <rw-floor material="color:#870"></rw-floor>
+              <rw-ceiling material="color:#880"></rw-ceiling>
           </rw-room>
+          <rw-room position="-3 0 -7" material="color:#866" width="5" length="5" height="3" outside="true">
+              <rw-wall ></rw-wall>
+              <rw-wall ></rw-wall>
+              <rw-wall ></rw-wall>
+              <rw-wall >
+                  <rw-doorhole id="frontOuter" material="color:#866"></rw-doorhole>
+                  <rw-doorlink from="#frontInner" to="#frontOuter" position="2.5 0 0" material="color:#866" >
+                      <rw-floor material="color:#866"></rw-floor>
+                      <rw-ceiling material="color:#866"></rw-ceiling>
+                      <rw-sides material="color:#866"></rw-sides>
+                  </rw-doorlink>
+              </rw-wall>
+              <rw-floor material="color:#866"></rw-floor>
+              <rw-ceiling material="color:#866"></rw-ceiling>
+          </rw-room>
+      
 
-          <rw-room outside="true" position="-3 0 -10" rotation="0 180 0" material="color: #866; side: double">
-              <rw-ceiling></rw-ceiling>
-              <rw-floor></rw-floor>
-              <rw-wall position="4 0 0"></rw-wall>
-              <rw-wall position="4 0 4"></rw-wall>
-              <rw-wall position="0 0 4"></rw-wall>
-              <rw-wall position="0 0 0">
-                  <rw-doorhole id="holeC"></rw-doorhole>
-                  <rw-doorlink from="#holeC" to="#holeD" position="2.5 0 0"></rw-doorlink>
-              </rw-wall>
-            </rw-room>
-            <rw-room outside="true" side="double" position="4 0 -2" material="color: #866; side: double">
-                <rw-wall position=" 1 0  1"  side="double" material="color:#877; side: double">
-                    <rw-doorhole id="holeD"></rw-doorhole>
-                </rw-wall>
-            </rw-room>
           
 
             

@@ -1,3 +1,4 @@
-require('aframe');
-require('aframe-room-component');
-require('aframe-rain');
+import 'aframe';
+import 'aframe-room-component';
+import 'aframe-rain';
+import 'aframe-template-component';
