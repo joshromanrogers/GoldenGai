@@ -1,0 +1,27 @@
+        <a-assets>
+                    <a-mixin id="wall" material="color: red" 
+                     geometry="primitive: box; depth: 0.25; height: 3.5; width: 4;">
+            </a-mixin>
+            <a-mixin id="half-wall" material="color: red" 
+                     geometry="primitive: box; depth: 0.25; height: 3.25; width: 1.5;">
+            </a-mixin>
+            <a-mixin id="top-wall" material="color: red" 
+                     geometry="primitive: box; depth: 0.25; height: 1; width: 1;">
+            </a-mixin>
+
+            <a-mixin id="layer" material="color: red"
+                     geometry="primitive: box; depth: 0.01; height: 3.5; width: 4">
+            </a-mixin>
+        </a-assets>
+        
+        <a-entity class="building" position="0 0 0">
+          <a-entity mixin="wall" position="-0.5 1.25 0">
+          </a-entity>
+          <a-entity mixin="half-wall" position="-1.75 1.375 4"></a-entity>
+          <a-entity mixin="half-wall" position="0.75 1.375 4"></a-entity>
+          <a-entity mixin="top-wall" position="-0.5 2.5 4"></a-entity>
+          <a-entity mixin="wall" position="-2.375 1.25 2" rotation="0 90 0"></a-entity>
+          <a-entity mixin="wall" position="1.375 1.25 2" rotation="0 90 0"></a-entity>
+          <a-entity mixin="layer" id="roof" position="-0.5 2.74 2" rotation="90 90 0"></a-entity>
+          <a-entity mixin="layer" id="floor" position="-0.5 0 2" rotation="90 90 0"></a-entity>
+        </a-entity>

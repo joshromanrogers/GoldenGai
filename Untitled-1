@@ -1,0 +1,93 @@
+            <!-- building w/ door -->
+            
+
+            <rw-room position="-3 0 -7" material="color:#866" width="4.8" length="4.8" height="3">
+
+            <!-- bar -->
+            <a-box id="bar" position="1.7 0.5 2.01" depth="4" height="1" width="0.7"></a-box>
+            <!-- stools -->
+            <a-entity position="2.45 0.3 1.1" geometry="primitive: cone; radiusBottom: 0.01; radiusTop: 0.02"></a-entity>
+            <a-entity position="2.55 0.3 1" geometry="primitive: cone; radiusBottom: 0.01; radiusTop: 0.02"></a-entity>
+            <a-entity position="2.65 0.3 1.1" geometry="primitive: cone; radiusBottom: 0.01; radiusTop: 0.02"></a-entity>
+            <a-entity position="2.55 0.3 1.2" geometry="primitive: cone; radiusBottom: 0.01; radiusTop: 0.02"></a-entity>
+            <a-cylinder position="2.55 0.8 1.1" color="crimson" height="0.1" radius="0.15"></a-cylinder>
+
+            <!-- bottle -->
+            <a-entity class="bottle" position="2 1.1 1.1" geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+            </a-entity>
+            
+
+            <!-- bottle (v2) -->
+            <a-entity class="bottle2" position="2 1.1 1.4">
+                <a-cylinder class="bottleBody" color="cyan" segments-radial="6" radius="0.07" height="0.2"></a-cylinder>
+                <a-cylinder class="bottleNeck" position="0 0.1 0" color="cyan" radius="0.025" height="0.08"></a-cylinder>
+                <a-cylinder class="bottleTop" position="0 0.14 0" color="red" radius="0.035" height="0.04"></a-cylinder>
+
+            </a-entity>
+            
+            <!-- bottle (v3) -->
+
+            <a-entity class="lantern" position="2.5 1.1 1.4">
+                <a-cylinder class="bottleNeck" position="0 0.3 0" color="cyan" radius="0.04" height="0.17"></a-cylinder>
+                <a-sphere class="lanternTop+++" position="0 0.2 0" radius="0.1"></a-sphere>
+                <a-cylinder class="lanternBody+++" radius="0.1" height="0.4"></a-cylinder>
+                
+                </a-entity>
+
+            <!-- japanese lantern -->
+
+            <a-entity class="lantern" position="3 1.1 1.4">
+                <a-cylinder color="lanternString" position="0 0.99 0" radius="0.01" height="1" ></a-cylinder>
+                <a-torus class="lanternHanger" position="0 0.4 0"arc="180" radius="0.08" radius-tubular="0.01"></a-torus>
+                <a-cylinder class="cylinderTop" position="0 0.4 0" radius="0.1" height="0.05"></a-cylinder>
+                <a-sphere class="lanternTop" position="0 0.2 0" radius="0.2"></a-sphere>
+                <a-cylinder class="lanternBody" radius="0.2" height="0.4">
+                    <a-entity light="type: point; intensity: 0.75; distance: 5; decay: 2"
+            position="0 0 0"></a-entity>
+                </a-cylinder>
+                <a-sphere class="lanternBottom"  position="0 -0.2  0" radius="0.2"></a-sphere>
+                <a-cylinder class="cylinderTop" position="0 -0.4 0" radius="0.1" height="0.05"></a-cylinder>
+            </a-entity>
+
+
+
+            
+
+                <rw-wall >
+                    <!-- tv shelf-->
+                    <a-box position="1.8 1.5 0.15"  height="0.05" width="0.5" depth="0.25"></a-box>
+                    <a-box position="1.8 2 0.1" height="0.5" width="0.8" depth=" 0.15"></a-box>
+                </rw-wall>
+                <rw-wall >
+                    <a-box position="0.5 1.4 0" scale="0.5 0.5 0.2"></a-box>
+                    <a-box position="1.5 1.7 0" scale="0.5 0.5 0.2">
+                    
+                    </a-box>
+                    <a-box position="2.5 1.4 0" scale="0.5 0.5 0.2"></a-box>
+                </rw-wall>
+                <rw-wall >
+                    <rw-doorhole id="frontInner" material="color:#866"></rw-doorhole>
+                </rw-wall>   
+                <rw-wall >
+                    <!-- shelf -->
+                    <a-box position="2 2 0.126"  height="0.05" width="4" depth="0.25"></a-box>
+                </rw-wall>
+                <rw-floor material="color:#870"></rw-floor>
+                <rw-ceiling material="color:#880"></rw-ceiling>
+            </rw-room>
+            <rw-room position="-3 0 -7" material="color:#866" width="5" length="5" height="3" outside="true">
+                <rw-wall ></rw-wall>
+                <rw-wall ></rw-wall>
+                <rw-wall ></rw-wall>
+                <rw-wall >
+                    <rw-doorhole id="frontOuter" material="color:#866"></rw-doorhole>
+                    <rw-doorlink from="#frontInner" to="#frontOuter" position="2.5 0 0" material="color:#866" >
+                        <rw-floor material="color:#866"></rw-floor>
+                        <rw-ceiling material="color:#866"></rw-ceiling>
+                        <rw-sides material="color:#866"></rw-sides>
+                    </rw-doorlink>
+                </rw-wall>
+                <rw-floor material="color:#866"></rw-floor>
+                <rw-ceiling material="color:#866"></rw-ceiling>
+            </rw-room>
