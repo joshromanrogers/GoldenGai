@@ -24,6 +24,7 @@
     "aframe-door": "^1.0.0",
     "aframe-extras": "^4.2.0",
     "aframe-extras.ocean": "^4.2.0",
+    "aframe-randomizer-components": "^3.0.2",
     "aframe-room-component": "^0.3.0",
     "aframe-template-component": "^3.2.1",
     "browserify": "^16.2.3",

@@ -1,5 +1,10 @@
+       <!-- assets -->
         <a-assets>
-                    <a-mixin id="wall" material="color: red" 
+            <img id="art1" src="img/Kanagawa.jpg">
+            <img id="art2" src="img/fighting.jpg">
+            <img id="art3" src="img/mountain.jpg">
+            <img id="art4" src="img/nature.jpg">
+            <a-mixin id="wall" material="color: red" 
                      geometry="primitive: box; depth: 0.25; height: 3.5; width: 4;">
             </a-mixin>
             <a-mixin id="half-wall" material="color: red" 
@@ -10,18 +15,166 @@
             </a-mixin>
 
             <a-mixin id="layer" material="color: red"
-                     geometry="primitive: box; depth: 0.01; height: 3.5; width: 4">
+                     geometry="primitive: box; depth: 0.2; height: 3.5; width: 5">
             </a-mixin>
+            <a-mixin id="chair-leg" geometry="primitive: cone; radiusBottom: 0.01; radiusTop: 0.02"></a-mixin>
         </a-assets>
-        
-        <a-entity class="building" position="0 0 0">
-          <a-entity mixin="wall" position="-0.5 1.25 0">
-          </a-entity>
-          <a-entity mixin="half-wall" position="-1.75 1.375 4"></a-entity>
-          <a-entity mixin="half-wall" position="0.75 1.375 4"></a-entity>
-          <a-entity mixin="top-wall" position="-0.5 2.5 4"></a-entity>
-          <a-entity mixin="wall" position="-2.375 1.25 2" rotation="0 90 0"></a-entity>
-          <a-entity mixin="wall" position="1.375 1.25 2" rotation="0 90 0"></a-entity>
-          <a-entity mixin="layer" id="roof" position="-0.5 2.74 2" rotation="90 90 0"></a-entity>
-          <a-entity mixin="layer" id="floor" position="-0.5 0 2" rotation="90 90 0"></a-entity>
+
+        <!-- building -->
+        <a-entity class="building" position="0 0 -7">
+
+            <!-- bar -->
+            <a-box id="bar" position="-1 0.5 1.4" depth="2.8" height="1" width="0.5">
+
+                <!-- bottle -->
+                <a-entity class="bottle" random-position="min: -0.25 0.65 -1.4; max: 0 0.65 -0.84" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="bottle" random-position="min: 0 0.65 -1.4; max: 0.25 0.65 -0.84" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="bottle" random-position="min: -0.25 0.65 -0.84; max: 0.25 0.65 -0.28" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="bottle" random-position="min: 0 0.65 -0.84; max: 0.25 0.65 -0.28" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="bottle" random-position="min: -0.25 0.65 -0.28; max: 0.25 0.65 0.28" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="bottle" random-position="min: 0 0.65 -0.28; max: 0.25 0.65 0.28" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="bottle" random-position="min: -0.25 0.65 0.28; max: 0.25 0.65 0.84" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="bottle" random-position="min: 0 0.65 0.28; max: 0.25 0.65 0.84" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="bottle" random-position="min: -0.25 0.65 0.84; max: 0.25 0.65 1.4" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="bottle" random-position="min: 0 0.65 0.84; max: 0.25 0.65 1.4" 
+                    geometry="primitive: cone; radiusBottom: 0.03; radiusTop: 0.01; height: 0.3">
+                    <a-cylinder class="bottleCap" position="0 0.15 0" color="crimson" height="0.02" radius="0.015"></a-cylinder>
+                </a-entity>
+                
+            </a-box>
+            
+            <!-- bottle (v2)
+            <a-entity class="bottle2" position="-0.9 1.1 1.4" random-position="min: -0.7 1.1 0.9; max: -1 1.1 1.9">
+                <a-cylinder class="bottleBody" color="cyan" segments-radial="6" radius="0.07" height="0.2"></a-cylinder>
+                <a-cylinder class="bottleNeck" position="0 0.1 0" color="cyan" radius="0.025" height="0.08"></a-cylinder>
+                <a-cylinder class="bottleTop" position="0 0.14 0" color="red" radius="0.035" height="0.04"></a-cylinder>
+            </a-entity>
+            
+             bottle (v3)
+            <a-entity class="bottle3" position="-0.9 1.1 1.7" scale="0.6 0.6 0.6" random-position="min: -0.7 1.1 0.9; max: -1 1.1 1.9">
+                <a-cylinder class="bottleNeck" position="0 0.3 0" color="cyan" radius="0.04" height="0.17"></a-cylinder>
+                <a-sphere class="lanternTop+++" position="0 0.2 0" radius="0.1"></a-sphere>
+                <a-cylinder class="lanternBody+++" radius="0.1" height="0.4"></a-cylinder>
+            </a-entity>
+
+            -->
+
+            <!-- stool -->
+            <a-entity id="stool1" position="-0.4 0 0" random-position="min: -0.6 0 -0.5; max: -0.2 0 0.5">
+                <a-entity mixin="chair-leg" position="-0.1 0.3 1.1"></a-entity>
+                <a-entity mixin="chair-leg" position="0 0.3 1"></a-entity>
+                <a-entity mixin="chair-leg" position="0.1 0.3 1.1"></a-entity>
+                <a-entity mixin="chair-leg" position="0 0.3 1.2"></a-entity>
+                <a-cylinder position="0 0.8 1.1" color="crimson" height="0.1" radius="0.15"></a-cylinder>
+            </a-entity>
+
+            <!-- stool -->
+            <a-entity id="stool2" position="-0.4 0 0.7" random-position="min: -0.6 0 0.7; max: -0.2 0 0.7">
+                <a-entity mixin="chair-leg" position="-0.1 0.3 1.1"></a-entity>
+                <a-entity mixin="chair-leg" position="0 0.3 1"></a-entity>
+                <a-entity mixin="chair-leg" position="0.1 0.3 1.1"></a-entity>
+                <a-entity mixin="chair-leg" position="0 0.3 1.2"></a-entity>
+                <a-cylinder position="0 0.8 1.1" color="crimson" height="0.1" radius="0.15"></a-cylinder>
+            </a-entity>
+
+            <!-- stool -->
+            <a-entity id="stool3" position="-0.4 0 1.4" random-position="min: -0.6 0 1.4; max: -0.2 0 1.4">
+                <a-entity mixin="chair-leg" position="-0.1 0.3 1.1"></a-entity>
+                <a-entity mixin="chair-leg" position="0 0.3 1"></a-entity>
+                <a-entity mixin="chair-leg" position="0.1 0.3 1.1"></a-entity>
+                <a-entity mixin="chair-leg" position="0 0.3 1.2"></a-entity>
+                <a-cylinder position="0 0.8 1.1" color="crimson" height="0.1" radius="0.15"></a-cylinder>
+            </a-entity>
+
+            <!-- tv + stand -->
+            <a-entity id="tv">
+                <a-box position="-1 1.5 0.15"  height="0.05" width="0.5" depth="0.25"></a-box>
+                <a-box position="-1 2 0.1" height="0.5" width="0.8" depth=" 0.15"></a-box>
+            </a-entitiy>
+            
+            <!-- lantern -->
+            <a-entity class="lantern" position="0 2 4.5" scale="0.6 0.6 0.6">
+                <a-cylinder color="lanternString" position="0 0.99 0" radius="0.01" height="1" ></a-cylinder>
+                <a-torus class="lanternHanger" position="0 0.4 0"arc="180" radius="0.08" radius-tubular="0.01"></a-torus>
+                <a-cylinder class="cylinderTop" position="0 0.4 0" radius="0.1" height="0.05"></a-cylinder>
+                <a-sphere class="lanternTop" position="0 0.2 0" radius="0.2"></a-sphere>
+                <a-cylinder class="lanternBody" radius="0.2" height="0.4">
+                    <!--<a-entity light="type: point; intensity: 0.75; distance: 5; decay: 2"
+            position="0 0 0"></a-entity>-->
+                </a-cylinder>
+                <a-sphere class="lanternBottom"  position="0 -0.2  0" radius="0.2"></a-sphere>
+                <a-cylinder class="cylinderTop" position="0 -0.4 0" radius="0.1" height="0.05"></a-cylinder>
+            </a-entity>
+
+            <!-- glasses shelf -->
+            <a-box position="-2.15 2 2" rotation="0 90 0" height="0.05" width="4" depth="0.25">
+                 <!-- glass (v1) -->
+                <a-entity class="glass1" position="0 -0.1 0">
+                    <a-cylinder position="0 0.2 0" color="cyan" radius="0.007" height="0.13"></a-cylinder>
+                    <a-sphere position="0 0.1 0" radius="0.07" theta-length="90"></a-sphere>
+                    <a-cylinder position="0 0.27 0" radius="0.05" height="0.005"></a-cylinder>
+                </a-entity>
+
+                <!-- glass (v2)  -->
+                <a-entity class="glass2" position="-1 0.08 0">
+                    <a-cylinder class="bottleBody" color="cyan" segments-radial="9" radius="0.06" height="0.16"></a-cylinder>
+                    <a-torus class="lanternHanger" position="-0.05 0 0"arc="180" radius="0.04" radius-tubular="0.005" 
+                             rotation="0 0 90"></a-torus>
+                </a-entity>
+            </a-box>
+
+            <a-entity mixin="wall" position="-0.5 1.25 0"></a-entity>
+            <a-entity mixin="half-wall" position="-1.75 1.375 4"></a-entity>
+            <a-entity mixin="half-wall" position="0.75 1.375 4"></a-entity>
+            <a-entity mixin="top-wall" position="-0.5 2.5 4"></a-entity>
+            <a-entity mixin="wall" position="-2.375 1.25 2" rotation="0 90 0"></a-entity>
+            <a-entity mixin="wall" position="1.375 1.25 2" rotation="0 90 0">
+                <!-- art -->
+                <a-box depth="0.3" height="0.7" width="1.05" src="#art1" 
+                       random-position="min: 1.5 1 0; max: 0.75 0 0"></a-box>
+                <a-box depth="0.3" height="0.8" width="0.4" src="#art2" 
+                       random-position="min: 0 1 0; max: -0.75 0 0"></a-box>
+                <a-box depth="0.3" height="0.5" width="1" src="#art3"
+                       random-position="min: 1.5 0 0; max: 0 -1 0"></a-box>
+                <a-box depth="0.3" height="1" width="0.5" src="#art4" 
+                       random-position="min: 0 0 0; max: -1.5 -1 0"></a-box>
+            </a-entity>
+            <a-entity mixin="layer" id="roof" position="-0.5 2.74 2.5" rotation="90 90 0"></a-entity>
+            <a-entity mixin="layer" id="floor" position="-0.5 0 2" rotation="90 90 0"></a-entity>
         </a-entity>

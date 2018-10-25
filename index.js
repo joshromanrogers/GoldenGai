@@ -4,3 +4,4 @@ import 'aframe-rain';
 import 'aframe-template-component';
 import 'aframe-extras';
 import 'nunjucks';
+import 'aframe-randomizer-components';
