@@ -18,10 +18,11 @@
                      geometry="primitive: box; depth: 0.2; height: 3.5; width: 5">
             </a-mixin>
             <a-mixin id="chair-leg" geometry="primitive: cone; radiusBottom: 0.01; radiusTop: 0.02"></a-mixin>
+            
         </a-assets>
 
         <!-- building -->
-        <a-entity class="building" position="0 0 -7">
+        <a-entity class="building" position="0 0 2">
 
             <!-- bar -->
             <a-box id="bar" position="-1 0.5 1.4" depth="2.8" height="1" width="0.5">
@@ -95,6 +96,11 @@
 
             -->
 
+            <!-- Nunjucks literal templates -->
+
+            <!-- 1st row -->
+            
+
             <!-- stool -->
             <a-entity id="stool1" position="-0.4 0 0" random-position="min: -0.6 0 -0.5; max: -0.2 0 0.5">
                 <a-entity mixin="chair-leg" position="-0.1 0.3 1.1"></a-entity>
@@ -135,8 +141,7 @@
                 <a-cylinder class="cylinderTop" position="0 0.4 0" radius="0.1" height="0.05"></a-cylinder>
                 <a-sphere class="lanternTop" position="0 0.2 0" radius="0.2"></a-sphere>
                 <a-cylinder class="lanternBody" radius="0.2" height="0.4">
-                    <!--<a-entity light="type: point; intensity: 0.75; distance: 5; decay: 2"
-            position="0 0 0"></a-entity>-->
+                    
                 </a-cylinder>
                 <a-sphere class="lanternBottom"  position="0 -0.2  0" radius="0.2"></a-sphere>
                 <a-cylinder class="cylinderTop" position="0 -0.4 0" radius="0.1" height="0.05"></a-cylinder>
@@ -151,7 +156,43 @@
                     <a-cylinder position="0 0.27 0" radius="0.05" height="0.005"></a-cylinder>
                 </a-entity>
 
+                <a-entity class="glass1" position="0 -0.1 0">
+                    <a-cylinder position="0 0.2 0" color="cyan" radius="0.007" height="0.13"></a-cylinder>
+                    <a-sphere position="0 0.1 0" radius="0.07" theta-length="90"></a-sphere>
+                    <a-cylinder position="0 0.27 0" radius="0.05" height="0.005"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="glass1" position="0 -0.1 0">
+                    <a-cylinder position="0 0.2 0" color="cyan" radius="0.007" height="0.13"></a-cylinder>
+                    <a-sphere position="0 0.1 0" radius="0.07" theta-length="90"></a-sphere>
+                    <a-cylinder position="0 0.27 0" radius="0.05" height="0.005"></a-cylinder>
+                </a-entity>
+
+                <a-entity class="glass1" position="0 -0.1 0">
+                    <a-cylinder position="0 0.2 0" color="cyan" radius="0.007" height="0.13"></a-cylinder>
+                    <a-sphere position="0 0.1 0" radius="0.07" theta-length="90"></a-sphere>
+                    <a-cylinder position="0 0.27 0" radius="0.05" height="0.005"></a-cylinder>
+                </a-entity>
+
                 <!-- glass (v2)  -->
+                <a-entity class="glass2" position="-1 0.08 0">
+                    <a-cylinder class="bottleBody" color="cyan" segments-radial="9" radius="0.06" height="0.16"></a-cylinder>
+                    <a-torus class="lanternHanger" position="-0.05 0 0"arc="180" radius="0.04" radius-tubular="0.005" 
+                             rotation="0 0 90"></a-torus>
+                </a-entity>
+
+                <a-entity class="glass2" position="-1 0.08 0">
+                    <a-cylinder class="bottleBody" color="cyan" segments-radial="9" radius="0.06" height="0.16"></a-cylinder>
+                    <a-torus class="lanternHanger" position="-0.05 0 0"arc="180" radius="0.04" radius-tubular="0.005" 
+                             rotation="0 0 90"></a-torus>
+                </a-entity>
+
+                <a-entity class="glass2" position="-1 0.08 0">
+                    <a-cylinder class="bottleBody" color="cyan" segments-radial="9" radius="0.06" height="0.16"></a-cylinder>
+                    <a-torus class="lanternHanger" position="-0.05 0 0"arc="180" radius="0.04" radius-tubular="0.005" 
+                             rotation="0 0 90"></a-torus>
+                </a-entity>
+
                 <a-entity class="glass2" position="-1 0.08 0">
                     <a-cylinder class="bottleBody" color="cyan" segments-radial="9" radius="0.06" height="0.16"></a-cylinder>
                     <a-torus class="lanternHanger" position="-0.05 0 0"arc="180" radius="0.04" radius-tubular="0.005" 
